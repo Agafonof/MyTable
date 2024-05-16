@@ -2,10 +2,10 @@ import React from "react";
 import { Button } from "react-bootstrap";
 
 import { CenterModal } from "../atoms/CenterModal";
+import { TableCellUnit } from "../atoms/TableCellUnit";
 import { EditContent } from "../organisms/EditContent";
 
 import { ContentUnit } from "../../types";
-import { TableCellUnit } from "../atoms/TableCellUnit";
 
 type TableHeaderProps = {
   content: ContentUnit;
