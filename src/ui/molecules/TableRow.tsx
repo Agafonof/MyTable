@@ -1,12 +1,11 @@
 import React from "react";
 import { Button } from "react-bootstrap";
-import CheckIcon from "@mui/icons-material/Check";
-import CloseIcon from "@mui/icons-material/Close";
 
 import { CenterModal } from "../atoms/CenterModal";
 import { EditContent } from "../organisms/EditContent";
 
 import { ContentUnit } from "../../types";
+import { TableCellUnit } from "../atoms/TableCellUnit";
 
 type TableHeaderProps = {
   content: ContentUnit;
@@ -23,15 +22,7 @@ export const TableRow = React.memo(
         <tr className="odd:bg-sky-50">
           {rowContent?.map((unit, index) => (
             <td className="px-3 py-2" key={index + "key"}>
-              {typeof unit === "boolean" ? (
-                unit ? (
-                  <CheckIcon className="text-green-600" />
-                ) : (
-                  <CloseIcon className="text-red-600" />
-                )
-              ) : (
-                unit
-              )}
+              <TableCellUnit unit={unit} />
             </td>
           ))}
           {handleEdit && (

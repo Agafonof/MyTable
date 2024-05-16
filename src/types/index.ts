@@ -3,5 +3,5 @@ export type TFilters = {
 };
 
 export type ContentUnit = {
-  [key: string]: React.ReactNode;
+  [key: string]: React.ReactNode | Object;
 };

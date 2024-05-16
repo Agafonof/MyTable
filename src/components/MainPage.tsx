@@ -29,6 +29,9 @@ export const MainPage = (): JSX.Element => {
         <Tab eventKey="tab3" title="Table3">
           <CustomTable content={formatedProducts} />
         </Tab>
+        <Tab eventKey="tab4" title="Table4">
+          <CustomTable content={Products} />
+        </Tab>
       </Tabs>
     </>
   );
